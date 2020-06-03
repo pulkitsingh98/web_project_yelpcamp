@@ -50,6 +50,7 @@ app.use(commentRoutes);
 app.use("/campgrounds",campgroundRoutes);
 app.use("/",indexRoutes);
 
+//writing this just to test git
 
 
 
