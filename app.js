@@ -17,6 +17,33 @@ var commentRoutes    = require("./routes/comments"),
 
 
 // seedDB();  //for seeding the databse
+//----------------------------------------------------------------------------------------------------------------------
+//------------connecting to atlas using environment variables-----------------------------------------------------------
+mongoose.connect(process.env.DATABASEURL);
+//----------------------------------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------------------------------
+//-------- HEROKU + ATLAS app db URL , use it for uploading code to heroku----------------------------------------------
+// mongoose.connect("mongodb+srv://adminpulkit:pulkit123@yelpcamp-0f4qw.mongodb.net/yelpcamp?retryWrites=true&w=majority",{
+// 	useNewUrlParser: true, 
+// 	useUnifiedTopology: true,
+// 	useCreateIndex: true
+// }).then(() => {
+// 	console.log("connected to db..!!");
+// }).catch(err => {
+// 	console.log("ERROR! ",err.message);
+// });
+//----------------------------------------------------------------------------------------------------------------------
+
+
+
+//----------------------------------------------------------------------------------------------------------
+//------ use this localhost URL if you r working locally use it---------------------------------------------
+//mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser: true, useUnifiedTopology: true});
+//----------------------------------------------------------------------------------------------------------
+
+
 
 
 mongoose.connect("mongodb://localhost:27017/yelp_camp",{useNewUrlParser: true, useUnifiedTopology: true});
